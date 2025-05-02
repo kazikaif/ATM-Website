@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="ATM.css" />
+  </head>
+  <body>
+    <main class="contain">
+      <div class="box">
+        <div class="D1">
+          <div><button class="options" id="Home">Home</button></div>
+          <div><button class="options" id="Pinchange">Pin Change</button></div>
+          <div>
+            <button class="options" id="Transaction">Transaction</button>
+          </div>
+        </div>
+
+        <div class="D2">
+          <div class="welcome">
+            <div class="pin">
+              <label>Enter Your PIN</label>
+              <form class="pin-inputs" id="pass">
+                <input type="password" maxlength="1" />
+                <input type="password" maxlength="1" />
+                <input type="password" maxlength="1" />
+                <input type="password" maxlength="1" />
+              </form>
+              <button class="confirm" id="confirmWithdraw">Confirm</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="D3">
+          <div>
+            <button class="options" id="btnBalance">Check Balance</button>
+          </div>
+          <div>
+            <button class="options" id="withdrawl">Cash Withdrawl</button>
+          </div>
+          <div><button class="options" id="deposit">Deposit</button></div>
+        </div>
+      </div>
+    </main>
+    <script src="ATM.js"></script>
+  </body>
+</html>
