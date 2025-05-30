@@ -1,5 +1,5 @@
 let Balance = 25000;
-let Pin = "2653"; // Make it mutable
+let Pin = "2653";
 
 const pin = document.querySelector(".pin");
 const Pinchange = document.querySelector("#Pinchange");
@@ -31,7 +31,6 @@ HomeBtn.addEventListener("click", () => {
   `;
 });
 
-// ✅ Auto-focus for PIN inputs
 inputs.forEach((input, index) => {
   input.addEventListener("input", () => {
     if (input.value.length === 1 && index < inputs.length - 1) {
@@ -46,10 +45,8 @@ inputs.forEach((input, index) => {
   });
 });
 
-// Auto-focus on first input when page loads
 inputs[0].focus();
 
-// PIN Confirm
 confirmBtn.addEventListener("click", () => {
   let enteredPin = "";
   inputs.forEach((input) => {
@@ -169,15 +166,12 @@ confirmBtn.addEventListener("click", () => {
   } else {
     alert("Incorrect PIN. Please try again.");
 
-    // Clear PIN inputs
     inputs.forEach((input) => (input.value = ""));
 
-    // Focus back on first input
     inputs[0].focus();
   }
 });
 
-// PIN Change
 Pinchange.addEventListener("click", () => {
   welcomeContainer.innerHTML = `
       <div class="pin">
@@ -201,11 +195,9 @@ Pinchange.addEventListener("click", () => {
       </div>
     `;
 
-  // Handle new inputs for auto-focus
   const oldPinInputs = document.querySelectorAll("#oldPinForm input");
   const newPinInputs = document.querySelectorAll("#newPinForm input");
 
-  // Autofocus logic for old PIN
   oldPinInputs.forEach((input, index) => {
     input.addEventListener("input", () => {
       if (input.value.length === 1 && index < oldPinInputs.length - 1) {
@@ -219,7 +211,6 @@ Pinchange.addEventListener("click", () => {
     });
   });
 
-  // Autofocus logic for new PIN
   newPinInputs.forEach((input, index) => {
     input.addEventListener("input", () => {
       if (input.value.length === 1 && index < newPinInputs.length - 1) {
@@ -233,7 +224,7 @@ Pinchange.addEventListener("click", () => {
     });
   });
 
-  oldPinInputs[0].focus(); // Focus first old PIN input
+  oldPinInputs[0].focus();
 
   const ChangePin = document.querySelector("#ChangePin");
   ChangePin.addEventListener("click", () => {
